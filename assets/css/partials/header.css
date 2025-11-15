@@ -1,0 +1,273 @@
+/* ===== HEADER STYLES ===== */
+.header-bg {
+    background-color: #EFEFEF !important;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    z-index: 1030;
+}
+
+/* Logo Styles */
+.logo-img {
+    max-width: 180px;
+    height: auto;
+}
+
+/* Navigation Link Styles */
+.nav-link-seuri {
+    color: #2C5D7F !important;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0.5rem 0rem !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link-seuri:hover {
+    color: #0d6efd !important;
+}
+
+/* ===== DROPDOWN STYLES ===== */
+.nav-item.dropdown .nav-link-seuri.dropdown-toggle {
+    position: relative;
+    padding-right: 1.5rem !important;
+}
+
+.nav-item.dropdown .nav-link-seuri.dropdown-toggle::after {
+    content: "▾";
+    border: none;
+    font-size: 1.2rem;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 0;
+    min-width: 220px;
+}
+
+.dropdown-item {
+    color: #2C5D7F;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.dropdown-item:last-child {
+    border-bottom: none;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: #D1A361;
+    color: white !important;
+}
+
+/* Button Styles */
+.btn-seuri {
+    background-color: #D1A361 !important;
+    border-color: #D1A361 !important;
+    color: white !important;
+    font-weight: bold;
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+.btn-seuri:hover {
+    background-color: #a87346 !important;
+    border-color: #a87346 !important;
+}
+
+/* ===== NAVBAR TOGGLER - DIPERBAIKI ===== */
+.navbar-toggler {
+    border: none;
+    padding: 0.25rem 0.5rem;
+    background: transparent !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.navbar-toggler-icon {
+    background-image: none !important;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Ikon hamburger untuk mobile */
+.navbar-toggler-icon i {
+    color: #2C5D7F;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+/* Animasi saat tombol aktif */
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon i {
+    transform: rotate(90deg);
+}
+
+/* ===== DESKTOP STYLES ===== */
+@media (min-width: 992px) {
+    .navbar-nav .nav-item {
+        margin: 0 1rem;
+    }
+    
+    .navbar-nav .nav-item.dropdown {
+        position: relative;
+    }
+    
+    .navbar-collapse {
+        justify-content: center;
+        flex-grow: 1;
+    }
+
+    .container-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding-left: 4rem; 
+        padding-right: 4rem;
+    }
+
+    .nav-and-button-wrapper {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+    }
+
+    .navbar-nav-end {
+        margin-left: auto;
+        padding-left: 1rem; 
+    }
+    
+    /* Dropdown di desktop */
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+}
+
+/* ===== MOBILE & TABLET STYLES - DIPERBAIKI ===== */
+@media (max-width: 991.98px) {
+    /* Logo tetap konsisten */
+    .logo-img {
+        max-width: 180px !important;
+    }
+    
+    /* Menghapus margin berlebihan pada item menu saat di mobile */
+    .navbar-nav .nav-item {
+        margin: 0; 
+    }
+    
+    /* Mengatur perataan teks untuk menu yang terbuka */
+    .navbar-collapse {
+        text-align: left;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    /* Memastikan link menu mengambil lebar penuh */
+    .nav-link-seuri {
+        display: block; 
+        padding-top: 0.75rem !important;
+        padding-bottom: 0.75rem !important;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+
+    /* Styling untuk dropdown di mobile */
+    .nav-item.dropdown .nav-link-seuri {
+        padding-right: 1.5rem !important;
+    }
+    
+    .dropdown-menu {
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
+        background-color: rgba(0,0,0,0.03);
+    }
+    
+    .dropdown-item {
+        padding-left: 2rem !important;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+        font-size: 0.95rem;
+    }
+
+    /* Menghilangkan garis pemisah pada item terakhir */
+    .navbar-nav .nav-item:last-child .nav-link-seuri,
+    .dropdown-item:last-child {
+        border-bottom: none;
+    }
+
+    /* Mengatur posisi tombol 'MAKE APPOINTMENT' (di bawah menu) */
+    .navbar-nav-end {
+        margin-left: 0;
+        padding: 1rem 0 0.5rem 0;
+        width: 100%;
+    }
+    
+    /* Memastikan tombol di mobile mengambil lebar penuh */
+    .btn-seuri {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: 0.5rem;
+    }
+
+    /* Perbaikan layout container untuk mobile */
+    .container-header {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/* ===== SPACING DARI HEADER KE HERO ===== */
+body {
+    padding-top: 100px;
+}
+
+@media (max-width: 1199.98px) {
+    body {
+        padding-top: 95px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    body {
+        padding-top: 90px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    body {
+        padding-top: 85px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    body {
+        padding-top: 80px;
+    }
+}
+
+@media (max-width: 375px) {
+    body {
+        padding-top: 75px;
+    }
+}

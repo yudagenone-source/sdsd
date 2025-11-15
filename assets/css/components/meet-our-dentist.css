@@ -1,0 +1,208 @@
+/* --- CSS MEET OUR DENTIST SECTION --- */
+
+.dentist-section {
+    padding: 0; 
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* KUNCI: Wrapper untuk Background Image - PATH DIPERBAIKI */
+.dentist-background-wrapper {
+    background-image: url('../../image/dentist-pattern-bg.png'); 
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    width: 100%;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    position: relative;
+}
+
+.dentist-container {
+    max-width: 1200px;
+}
+
+/* Judul Section */
+.dentist-section-title {
+    font-size: 3rem; 
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.dentist-section-subtitle {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: white;
+}
+
+/* --- KARTU DOKTER --- */
+.dentist-card {
+    text-align: center;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 400px;
+}
+
+/* Pembungkus Foto */
+.dentist-photo-wrapper {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    background-color: #e6e6e6;
+    flex-shrink: 0;
+}
+
+/* Foto Dokter */
+.dentist-photo {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    border-radius: 15px;
+}
+
+/* Nama Dokter */
+.dentist-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    flex-grow: 1;
+    min-height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Tag Spesialisasi - BORDER MENYESUAIKAN TEXT */
+.specialty-tag {
+    display: inline-block;
+    background-color: transparent; 
+    border: 1px solid white;
+    color: white;
+    font-size: 0.9rem;
+    padding: 0.4rem 1.2rem;
+    border-radius: 5px;
+    font-weight: 600;
+    margin-top: auto;
+    flex-shrink: 0;
+    /* Width otomatis menyesuaikan text */
+    width: fit-content;
+    width: -moz-fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    /* Memastikan border mengikuti panjang text */
+    white-space: nowrap;
+}
+
+/* --- Check Selengkapnya Link --- */
+.check-more-wrapper {
+    text-align: right;
+    margin-top: 2rem;
+    padding-right: 15px;
+}
+
+.check-more-link {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-bottom: none !important;
+}
+
+.check-more-link:hover {
+    color: white;
+    text-decoration: none !important;
+}
+
+.check-more-arrow {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 991.98px) {
+    .dentist-background-wrapper {
+        padding: 3rem 0;
+    }
+    .dentist-section-title {
+        font-size: 2.5rem;
+    }
+    .dentist-card {
+        min-height: 380px;
+    }
+    .dentist-name {
+        font-size: 1.4rem;
+        min-height: 3rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .dentist-row {
+        justify-content: center;
+    }
+    .dentist-card {
+        max-width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+        min-height: 360px;
+    }
+    .dentist-photo {
+        height: 320px;
+    }
+    .dentist-section-title,
+    .dentist-section-subtitle {
+        text-align: left;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .dentist-background-wrapper {
+        padding: 2.5rem 0;
+    }
+    .dentist-section-title {
+        font-size: 2rem;
+        text-align: left;
+    }
+    .dentist-section-subtitle {
+        font-size: 1rem;
+        text-align: left;
+    }
+    .dentist-card {
+        min-height: 340px;
+    }
+    .dentist-photo {
+        height: 300px;
+    }
+    .dentist-name {
+        font-size: 1.3rem;
+        min-height: 2.8rem;
+    }
+    .specialty-tag {
+        font-size: 0.85rem;
+        padding: 0.35rem 1rem;
+    }
+    .check-more-link {
+        font-size: 1rem;
+    }
+}
+
+/* Tambahan untuk memastikan alignment sempurna */
+@media (min-width: 992px) {
+    .dentist-card {
+        min-height: 420px;
+    }
+}

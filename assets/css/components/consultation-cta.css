@@ -1,0 +1,283 @@
+/* --- CSS CONSULTATION CTA SECTION (Full-Width Banner) --- */
+
+.consultation-cta-section {
+    background-color: #CFCFCE;
+    overflow: hidden;
+    border-radius: 30px;
+    padding: 0;
+}
+
+.consultation-row {
+    margin-left: 0;
+    margin-right: 0;
+    min-height: 450px;
+    align-items: stretch;
+}
+
+/* 1. GAMBAR TIM DOKTER (KIRI) - DESKTOP */
+.consultation-image-wrapper {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    height: 100%;
+    padding: 0;
+    position: relative;
+}
+
+.consultation-team-img {
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: bottom left;
+    display: block;
+}
+
+.consultation-image-wrapper.align-bottom {
+    align-items: flex-end;
+}
+
+.consultation-team-img.bottom-aligned {
+    width: 100%;
+    height: auto;
+    max-height: 95%;
+    object-fit: contain;
+    object-position: bottom left;
+    margin-bottom: -120px;
+}
+
+/* 2. KONTEN (KANAN) - DESKTOP */
+.consultation-content-wrapper {
+    background-color: #cfcfce;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 3rem 5% 3rem 5%;
+    min-height: 450px;
+}
+
+.consultation-content-box {
+    max-width: 450px;
+    text-align: center;
+}
+
+.consultation-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #0d1e3d;
+    margin-bottom: 0.5rem;
+    line-height: 1.1;
+    text-align: center;
+}
+
+.consultation-subtitle {
+    font-size: 1.9rem;
+    font-weight: 400;
+    color: #0d1e3d;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.btn-consultation-cta {
+    background-color: #D1A361 !important;
+    border-color: #D1A361 !important;
+    color: white !important;
+    font-weight: bold;
+    padding: 15px 40px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.btn-consultation-cta:hover {
+    background-color: #a87346 !important;
+    border-color: #a87346 !important;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+
+/* TABLET LANDSCAPE (768px - 1199px) */
+@media (max-width: 1199.98px) and (min-width: 768px) {
+    .consultation-image-wrapper {
+        align-items: flex-end !important;
+        justify-content: center;
+    }
+    
+    .consultation-team-img.bottom-aligned {
+        margin-bottom: 0 !important;
+        max-height: 95%;
+        object-fit: contain;
+        object-position: bottom center;
+        align-self: flex-end;
+    }
+}
+
+/* TABLET */
+@media (max-width: 991.98px) {
+    .consultation-row {
+        min-height: 350px;
+    }
+    
+    .consultation-content-wrapper {
+        min-height: auto;
+        padding: 3rem;
+    }
+
+    .consultation-title {
+        font-size: 2.5rem;
+    }
+
+    .consultation-subtitle {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+    }
+
+    /* FIX GAMBAR DI TABLET - NEMPEL BAWAH */
+    .consultation-image-wrapper {
+        align-items: flex-end;
+        justify-content: center;
+    }
+    
+    .consultation-team-img.bottom-aligned {
+        margin-bottom: 0;
+        max-height: 85%;
+        object-position: bottom center;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 767.98px) {
+    .consultation-cta-section {
+        padding: 0;
+    }
+    
+    .consultation-row {
+        min-height: auto;
+        flex-direction: column;
+    }
+    
+    /* KONTEN DI ATAS - MOBILE */
+    .consultation-content-wrapper {
+        order: 1;
+        align-items: center;
+        text-align: center;
+        padding: 2.5rem 15px;
+        min-height: 250px;
+        width: 100%;
+    }
+
+    /* GAMBAR DI BAWAH - MOBILE - PAS DENGAN BACKGROUND BOTTOM */
+    .consultation-image-wrapper {
+        order: 2;
+        height: auto;
+        min-height: 280px;
+        align-items: flex-end !important;
+        justify-content: center;
+        width: 100%;
+        padding: 0 !important;
+        margin: 0 !important;
+        overflow: hidden;
+        display: flex;
+    }
+
+    .consultation-team-img.bottom-aligned {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        object-fit: cover;
+        object-position: bottom center;
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+        max-height: none;
+        align-self: flex-end;
+        display: block;
+    }
+
+    /* MOBILE CENTERED - untuk semua halaman kecuali index.php */
+    .consultation-cta-section.mobile-centered .consultation-image-wrapper {
+        align-items: flex-end !important;
+        justify-content: center;
+        display: flex;
+        min-height: 320px;
+        padding: 0 !important;
+    }
+
+    .consultation-cta-section.mobile-centered .consultation-team-img.bottom-aligned {
+        object-fit: cover;
+        object-position: bottom center;
+        max-height: none;
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+        align-self: flex-end;
+    }
+
+    .consultation-content-box {
+        max-width: 100%;
+    }
+    
+    .consultation-title {
+        font-size: var(--font-h2);
+    }
+
+    .consultation-subtitle {
+        font-size: var(--font-h5);
+        margin-bottom: 1.5rem;
+    }
+    
+    .btn-consultation-cta {
+        width: 100%;
+        max-width: 300px;
+        padding: 12px 30px;
+        font-size: var(--font-button);
+    }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+    .consultation-content-wrapper {
+        padding: 2rem 10px;
+        min-height: 200px;
+    }
+    
+    .consultation-image-wrapper {
+        min-height: 260px;
+        padding: 0 !important;
+        margin: 0 !important;
+        align-items: flex-end !important;
+    }
+    
+    .consultation-team-img.bottom-aligned {
+        width: 100%;
+        height: auto;
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+        align-self: flex-end;
+    }
+
+    .consultation-cta-section.mobile-centered .consultation-image-wrapper {
+        min-height: 280px;
+        align-items: flex-end !important;
+    }
+
+    .consultation-cta-section.mobile-centered .consultation-team-img.bottom-aligned {
+        max-height: none;
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+    }
+    
+    .consultation-title {
+        font-size: var(--font-h3);
+    }
+    
+    .consultation-subtitle {
+        font-size: var(--font-h6);
+    }
+}

@@ -1,0 +1,182 @@
+/* footer.css */
+
+/*
+   Pastikan file CSS ini di-link di head index.php Anda,
+   misalnya: <link rel="stylesheet" href="path/to/footer.css">
+*/
+
+.site-footer {
+    /* Menggunakan background image footer.png - PATH DIPERBAIKI */
+    background-color: #cfcfce;
+    /* Warna latar belakang dasar jika gambar tidak termuat */
+   
+    /* Properti lain untuk background image */
+    background-size: cover; /* Pastikan gambar menutupi seluruh area */
+    background-position: center bottom; /* Sesuaikan posisi gambar */
+    background-repeat: no-repeat;
+    
+    /* TAMBAHKAN BACKGROUND BUNGA DI POJOK KANAN BAWAH */
+    position: relative;
+    
+    color: #5e87aa; /* Warna teks utama putih */
+    padding: 20px 0; /* Padding vertikal */
+    
+    /* Overflow hidden agar background bunga tidak keluar dari container */
+    overflow: hidden;
+}
+
+/* Background bunga di pojok kanan bawah */
+.site-footer::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 400px; /* Sesuaikan ukuran sesuai kebutuhan */
+    height: 400px; /* Sesuaikan ukuran sesuai kebutuhan */
+    background-image: url('../../image/bungafooter.png'); /* Ganti dengan path yang benar */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    opacity: 0.7; /* Sesuaikan transparansi sesuai kebutuhan */
+    z-index: 1;
+}
+
+/* Container untuk membuat konten tidak terlalu melebar */
+.site-footer .container {
+    max-width: 1200px;
+    position: relative;
+    z-index: 2; /* Pastikan konten di atas background bunga */
+}
+
+.footer-heading {
+    font-size: 1.8rem; /* Ukuran font judul */
+    font-weight: bold; /* Judul tebal */
+    margin-bottom: 1rem;
+    color: #5e87aa; /* Warna judul putih */
+}
+
+/* Style untuk ikon dan teks kontak */
+.contact-item {
+    display: flex; /* Untuk menyejajarkan ikon dan teks */
+    align-items: flex-start;
+    font-size: 1.2rem;
+    font-weight: 450;
+    /* Tambahkan spasi di bawah item kontak di mobile */
+    margin-bottom: 0.5rem; 
+}
+
+.contact-item i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    
+    /* Warna ikon harus putih seperti teks */
+    color: #7a7a7a;
+}
+
+/* Styling untuk Jam Klinik */
+.site-footer p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-weight: 450;
+    margin-bottom: 0.5rem;
+}
+
+.site-footer strong {
+    font-weight: bold;
+}
+
+.closed-on-sunday {
+    /* Warna yang sedikit berbeda untuk 'Closed on Sundays' */
+    color: #dddddd; 
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* Styling untuk Ikon Media Sosial */
+.social-icons {
+    display: flex;
+    gap: 10px; /* Jarak antar ikon */
+    margin-top: 5px;
+}
+
+.social-link {
+    /* Membuat lingkaran di sekitar ikon */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #D1A361; /* Border putih */
+    border-radius: 50%; /* Bentuk lingkaran */
+    color: #D1A361; /* Warna ikon putih */
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.social-link i {
+    font-size: 1.2rem;
+}
+
+.social-link:hover {
+    /* Efek hover opsional */
+    background-color: rgba(255, 255, 255, 0.1); 
+}
+
+.accessibility-text {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+
+/* Media Query untuk Mobile/Tablet (Responsif) */
+@media (max-width: 767.98px) {
+    .site-footer {
+        padding: 30px 0; /* Tambah padding di mobile untuk tampilan lebih ringkas */
+    }
+    
+    .site-footer::before {
+        width: 150px; /* Ukuran lebih kecil di mobile */
+        height: 120px;
+        opacity: 0.6; /* Transparansi lebih tinggi di mobile */
+    }
+    
+    .footer-heading {
+        margin-bottom: 0.5rem; /* Kurangi margin di bawah judul */
+        font-size: 1.4rem;
+    }
+
+    /* Mengurangi margin di bawah setiap kolom di mobile */
+    .mb-4.mb-md-0 {
+        margin-bottom: 1.5rem !important; 
+    }
+
+    /* Menjaga agar elemen tetap ringkas di mobile */
+    .contact-item {
+        font-size: 0.95rem; 
+    }
+    
+    .site-footer p {
+        font-size: 0.95rem; 
+        line-height: 1.4;
+    }
+    
+    .accessibility-text {
+        font-size: 0.85rem;
+    }
+    
+    /* Mengurangi jarak antar item di baris kontak dan jam kerja */
+    .row > div {
+        /* Tambahkan padding horizontal agar konten tidak menempel ke pinggir */
+        padding-left: 15px; 
+        padding-right: 15px;
+    }
+}
+
+/* Media Query untuk Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .site-footer::before {
+        width: 200px; /* Ukuran medium untuk tablet */
+        height: 160px;
+    }
+
+    
+}

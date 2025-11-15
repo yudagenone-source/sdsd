@@ -1,0 +1,117 @@
+/* --- CSS OUR PARTNER SECTION (image_ffb384.png) --- */
+
+.partner-section {
+    padding: 4rem 0 5rem 0; 
+}
+
+.partner-container {
+    max-width: 1000px;
+    text-align: center;
+}
+
+.partner-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #5D7598; /* Warna biru keabu-abuan */
+    margin-bottom: 3.5rem; /* Jarak yang cukup ke logo */
+}
+
+/* --- CAROUSEL DAN LOGO WRAPPER --- */
+
+.partner-carousel {
+    position: relative;
+}
+
+.partner-logo-group {
+    /* Mengatur agar logo-logo berjejer horizontal dan terpusat */
+    display: flex;
+    justify-content: space-around; /* Jarak rata antar logo */
+    align-items: center;
+    padding: 0 4rem; /* Padding agar logo tidak terlalu dekat ke panah */
+}
+
+.partner-logo-item {
+    /* Memastikan setiap logo item punya ruang yang sama */
+    flex-basis: 25%; /* Untuk 4 logo, masing-masing 25% */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.partner-logo {
+    /* Batasan ukuran logo agar tetap proporsional */
+    max-width: 100%;
+    height: auto;
+    max-height: 80px; /* Batasi tinggi maksimum agar sejajar */
+    /* Membuat logo berwarna cerah tetap terlihat */
+    opacity: 1; 
+    filter: none;
+}
+
+
+/* --- NAVIGASI SLIDER (Panah) --- */
+
+.partner-control {
+    /* Mengatur posisi dan ukuran kontrol */
+    width: 3%; 
+    opacity: 1; /* Pastikan selalu terlihat, sesuai desain */
+}
+
+.partner-arrow-icon {
+    /* Styling panah sederhana */
+    font-size: 1.5rem;
+    color: #a0a0a0; /* Warna abu-abu yang lebih tua */
+    font-weight: bold;
+    /* Hilangkan background default Bootstrap */
+    background: none !important; 
+}
+
+.partner-control:hover {
+    opacity: 0.8;
+}
+
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 991.98px) {
+    .partner-title {
+        margin-bottom: 2rem;
+    }
+    
+    .partner-logo-group {
+        padding: 0 2rem;
+    }
+
+    .partner-logo-item {
+        flex-basis: 25%;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .partner-section {
+        padding: 3rem 0 4rem 0;
+    }
+    
+    .partner-logo-group {
+        /* Susun 2 logo per baris di mobile kecil */
+        flex-wrap: wrap; 
+        padding: 0 1rem;
+    }
+    
+    .partner-logo-item {
+        flex-basis: 50%; /* 2 logo per baris */
+        margin-bottom: 1.5rem;
+    }
+    
+    .partner-logo {
+        max-height: 60px;
+    }
+    
+    /* Tombol navigasi dikecilkan di mobile */
+    .partner-control {
+        width: 5%;
+    }
+    .partner-arrow-icon {
+        font-size: 1.2rem;
+    }
+}

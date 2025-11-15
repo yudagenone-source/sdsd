@@ -1,0 +1,81 @@
+.doctor-section {
+    padding: 80px 0;
+}
+
+.doctor-location {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: #2c3e50;
+    margin-bottom: 40px;
+}
+
+.doctor-photo {
+    text-align: center;
+}
+
+.doctor-photo img {
+    width: 100%;
+   
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.doctor-content {
+    padding-left: 20px; /* Jarak kolom dikurangi */
+}
+
+.doctor-quote {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 50px; /* Jarak kutipan dan nama dokter diperbesar */
+    line-height: 1.5;
+}
+
+.doctor-info {
+    margin-top: 25px;
+}
+
+.doctor-name {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.doctor-specialization {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 18px;
+    color: #6c757d;
+    font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .doctor-section {
+        padding: 50px 0;
+    }
+    
+    .doctor-location {
+        font-size: 26px;
+        margin-bottom: 30px;
+    }
+    
+    .doctor-content {
+        padding-left: 0;
+        text-align: center;
+        margin-top: 30px;
+    }
+    
+    .doctor-quote {
+        font-size: 20px;
+        margin-bottom: 40px; /* Tetap ada jarak di mobile */
+    }
+    
+    .doctor-photo img {
+        max-width: 400px; /* Sedikit lebih kecil di mobile */
+    }
+}

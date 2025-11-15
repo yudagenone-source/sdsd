@@ -1,0 +1,37 @@
+RewriteEngine On
+
+# Hide .php extension from all files
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php [L]
+
+# Remove 'pages' from URL
+RewriteRule ^littleseuri/?$ pages/littleseuri.php [L]
+RewriteRule ^promo-klinik-gigi/?$ pages/promo.php [L]
+RewriteRule ^layanan-gigi/?$ pages/services.php [L]
+RewriteRule ^dentist-terdekat/?$ pages/doctor.php [L]
+RewriteRule ^location/?$ pages/location.php [L]
+RewriteRule ^artikel/?$ pages/blog.php [L]
+RewriteRule ^pricelist/?$ pages/pricelist.php [L]
+RewriteRule ^bleaching-gigi-terdekat/?$ pages/bleaching-gigi-terdekat.php [L]
+RewriteRule ^orthodontis-terdekat/?$ pages/orthodontics.php [L]
+RewriteRule ^endodontist-terdekat/?$ pages/psa.php [L]
+RewriteRule ^dokter-gigi-anak-terdekat/?$ pages/pedodontia.php [L]
+RewriteRule ^implan-gigi-terdekat/?$ pages/implan.php [L]
+RewriteRule ^gigi-tiruan-terdekat/?$ pages/gigitiruan.php [L]
+RewriteRule ^scaling-gigi-terdekat/?$ pages/scaling.php [L]
+RewriteRule ^dokter-spesialis-bedah-mulut/?$ pages/odontectomy.php [L]
+RewriteRule ^veneer-gigi-terdekat/?$ pages/veneer.php [L]
+RewriteRule ^tambal-gigi-terdekat/?$ pages/tambal.php [L]
+RewriteRule ^cabut-gigi-terdekat/?$ pages/cabut.php [L]
+RewriteRule ^crown-gigi-terdekat/?$ pages/crown.php [L]
+RewriteRule ^profil-dokter/([0-9]+)/?$ pages/profile-doctor.php?id=$1 [L]
+RewriteRule ^profil-dokter/?$ pages/profile-doctor.php [L]
+RewriteRule ^dental-clinic-bogor/?$ pages/location-page.php [L]
+RewriteRule ^artikel-detail/?$ pages/blog-detail.php [L]
+# Redirect if someone accidentally accesses with .php
+RewriteCond %{THE_REQUEST} \s/+(.*?)\.php[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# Custom error page
+ErrorDocument 404 /404.php

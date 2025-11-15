@@ -1,0 +1,125 @@
+/* ===== CSS CUSTOM PROPERTIES (TYPOGRAPHY SCALE) ===== */
+:root {
+    /* Desktop Typography Scale */
+    --font-h1: 3rem;
+    --font-h2: 2.5rem;
+    --font-h3: 2rem;
+    --font-h4: 1.5rem;
+    --font-h5: 1.25rem;
+    --font-h6: 1.125rem;
+    --font-body: 1.125rem;
+    --font-small: 0.875rem;
+    --font-button: 1rem;
+    --font-button-large: 1.125rem;
+    
+    /* Line Heights */
+    --lh-h1: 1.1;
+    --lh-h2: 1.15;
+    --lh-h3: 1.2;
+    --lh-h4: 1.3;
+    --lh-h5: 1.35;
+    --lh-h6: 1.4;
+    --lh-body: 1.6;
+    --lh-small: 1.4;
+}
+
+/* Tablet Responsive Variables (768px - 1199px) */
+@media (max-width: 1199px) and (min-width: 768px) {
+    :root {
+        --font-h1: 2.75rem;
+        --font-h2: 2.3rem;
+        --font-h3: 1.85rem;
+        --font-h4: 1.4rem;
+        --font-h5: 1.2rem;
+        --font-h6: 1.1rem;
+        --font-body: 1.0rem;
+        --font-button: 0.95rem;
+    }
+}
+
+/* Mobile Responsive Variables (≤767px) - Using clamp for fluid scaling */
+@media (max-width: 767px) {
+    :root {
+        --font-h1: clamp(2rem, 5vw, 2.4rem);
+        --font-h2: clamp(1.75rem, 4.5vw, 2rem);
+        --font-h3: clamp(1.5rem, 4vw, 1.75rem);
+        --font-h4: clamp(1.25rem, 3.5vw, 1.4rem);
+        --font-h5: clamp(1.1rem, 3vw, 1.2rem);
+        --font-h6: clamp(1rem, 2.8vw, 1.1rem);
+        --font-body: clamp(1rem, 2.8vw, 1.0rem);
+        --font-small: clamp(0.85rem, 2.5vw, 0.9rem);
+        --font-button: clamp(0.95rem, 3vw, 1.05rem);
+        --font-button-large: clamp(1rem, 3.2vw, 1.1rem);
+    }
+}
+
+/* ===== BODY STYLES ===== */
+body {
+    font-family: 'Gilroy', 'Arial', sans-serif;
+    font-size: var(--font-body);
+    line-height: var(--lh-body);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: hsl(0, 0%, 94%) !important;
+}
+
+/* ===== TYPOGRAPHY BASE STYLES ===== */
+h1 {
+    font-size: var(--font-h1);
+    line-height: var(--lh-h1);
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: var(--font-h2);
+    line-height: var(--lh-h2);
+    margin-bottom: 0.875rem;
+}
+
+h3 {
+    font-size: var(--font-h3);
+    line-height: var(--lh-h3);
+    margin-bottom: 0.75rem;
+}
+
+h4 {
+    font-size: var(--font-h4);
+    line-height: var(--lh-h4);
+    margin-bottom: 0.625rem;
+}
+
+h5 {
+    font-size: var(--font-h5);
+    line-height: var(--lh-h5);
+    margin-bottom: 0.5rem;
+}
+
+h6 {
+    font-size: var(--font-h6);
+    line-height: var(--lh-h6);
+    margin-bottom: 0.5rem;
+}
+
+p {
+    font-size: var(--font-body);
+    line-height: var(--lh-body);
+    margin-bottom: 1rem;
+}
+
+small, .small {
+    font-size: var(--font-small);
+    line-height: var(--lh-small);
+}
+
+/* ===== BUTTON TYPOGRAPHY ===== */
+.btn, button {
+    font-size: var(--font-button);
+    line-height: 1.5;
+}
+
+.btn-lg, .btn-large {
+    font-size: var(--font-button-large);
+}
+

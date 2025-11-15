@@ -1,0 +1,228 @@
+/* --- CSS OUR FACILITIES SECTION (GAYA LITTLE SEURI + SLIDER) --- */
+
+.facilities-section {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+}
+
+/* Hapus margin/padding default dari row dan container agar full-width */
+.facilities-container-fluid {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.facilities-row {
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    align-items: stretch; /* Memastikan kolom memiliki tinggi yang sama */
+}
+
+/* 1. WRAPPER KONTEN KIRI */
+.facilities-content-wrapper {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    background-color: #ffffff;
+    
+    /* KUNCI: FLEXBOX UNTUK MENENGAHKAN KOTAK PENDEK */
+    display: flex;
+    justify-content: flex-end; /* Dorong kotak ke kanan (merapat ke gambar) */
+    align-items: center; /* KUNCI: Kotak di tengah vertikal */
+    
+    /* KUNCI: TINGGI FIXED SESUAI SECTION */
+    height: 600px; /* Atur tinggi sesuai kebutuhan */
+}
+
+/* 2. KOTAK KONTEN INTERNAL */
+.facilities-content-box {
+    height: auto; 
+    min-height: auto !important; 
+    
+    /* KUNCI: BATASI LEBAR AGAR PENDEK & TERPUSAT HORIZONTAL DI KOLOMNYA */
+    max-width: 85%; 
+    margin: 0 10%; 
+    margin-right: 0; 
+    
+    /* Kunci: Border Kanan sebagai garis pemisah vertikal */
+    border-right: 1px solid #e0e0e0; 
+    border-radius: 0 !important; 
+
+    /* Padding INTERNAL */
+    padding: 3rem 4rem 3rem 4rem; 
+    background-color: transparent; 
+}
+
+/* --- JUDUL DAN TOMBOL (Style Facilities) --- */
+
+.facilities-title {
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: #5D7598; /* Warna Biru */
+    margin-bottom: 0.5rem;
+    line-height: 1.1;
+}
+
+.facilities-subtitle {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #4A4A4A;
+    margin-bottom: 2.5rem; 
+}
+
+/* Tombol Make Appointment */
+.btn-facilities-appointment {
+    background-color: #D1A361 !important; /* Warna Krem/Cokelat */
+    border-color: #D1A361 !important;
+    color: white !important;
+    font-weight: bold;
+    padding: 15px 40px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(209, 163, 97, 0.4); 
+    transition: all 0.3s ease;
+}
+.btn-facilities-appointment:hover {
+    background-color: #a87346 !important;
+    border-color: #a87346 !important;
+}
+
+/* --- SLIDER GAMBAR KANAN --- */
+
+.facilities-slider-wrapper {
+    padding-left: 0 !important; 
+    padding-right: 0 !important; 
+    
+    /* KUNCI: TINGGI SAMA DENGAN KONTEN KIRI */
+    height: 600px; /* Sama dengan facilities-content-wrapper */
+}
+
+.facilities-carousel {
+    /* KUNCI: TINGGI PENUH UNTUK SLIDER */
+    height: 100%;
+    /* Tidak ada border-radius (sesuai Little Seuri) */
+    border-radius: 0 !important; 
+    
+    /* KUNCI: HIDE OVERFLOW UNTUK CROP GAMBAR */
+    overflow: hidden;
+}
+
+.carousel-inner, .carousel-item {
+    height: 100%;
+}
+
+.facility-img {
+    /* KUNCI: GAMBAR MENGISI SELURUH SLIDER DENGAN CROP */
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; /* INI YANG BIKIN CROP OTOMATIS */
+    object-position: center; /* FOKUS KE TENGAH GAMBAR */
+    border-radius: 0 !important;
+    
+    /* Pastikan gambar tidak stretch */
+    display: block;
+}
+
+/* Caption di Pojok Kanan Bawah Gambar */
+.facility-caption {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.6); 
+    padding: 8px 15px;
+    border-radius: 8px;
+    z-index: 10;
+}
+
+/* --- NAVIGASI SLIDER --- */
+
+.facility-control {
+    width: 10%; 
+    opacity: 1; 
+    transition: opacity 0.3s;
+}
+
+.facility-arrow-icon {
+    font-size: 2rem;
+    color: #ffffff; 
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 50%;
+}
+
+.facility-control:hover {
+    opacity: 0.8;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS (Little Seuri di Mobile) ===== */
+@media (max-width: 991.98px) {
+    .facilities-section { 
+        padding-top: 3rem !important; 
+        padding-bottom: 3rem !important; 
+    }
+
+    /* KUNCI: RESET TINGGI DI MOBILE */
+    .facilities-content-wrapper,
+    .facilities-slider-wrapper {
+        height: auto; /* Biarkan tinggi natural di mobile */
+        min-height: auto;
+    }
+
+    /* 1. KONTEN (Teks) */
+    .facilities-content-wrapper {
+        justify-content: center; 
+    }
+
+    .facilities-content-box {
+        padding: 2rem;
+        max-width: 100%; 
+        /* Border full dan rounded di mobile */
+        border: 1px solid #e0e0e0; 
+        border-radius: 10px !important; 
+        margin: 0 15px; /* Jarak dari sisi layar */
+        border-right: none; /* Hapus border kanan di mobile */
+    }
+    
+    /* 2. SLIDER GAMBAR */
+    .facilities-slider-wrapper {
+        margin-bottom: 2rem; 
+        padding: 0 15px !important; /* Tambah padding agar tidak terlalu lebar di mobile */
+    }
+
+    .facilities-carousel {
+        height: 350px; /* Fixed height di mobile */
+        border-radius: 10px !important;
+    }
+    
+    .facility-img {
+        height: 350px; /* Fixed height di mobile */
+        border-radius: 10px !important;
+    }
+    
+    .facilities-title, 
+    .facilities-subtitle { 
+        text-align: center; 
+    }
+    
+    /* Tombol lebar penuh */
+    .btn-facilities-appointment { 
+        width: 100%; 
+    }
+    
+    /* Sembunyikan navigasi slider di mobile */
+    .facility-control { 
+        display: none; 
+    }
+}
+
+/* Tablet adjustments */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .facilities-content-wrapper,
+    .facilities-slider-wrapper {
+        height: 500px; /* Sedikit lebih pendek di tablet */
+    }
+}

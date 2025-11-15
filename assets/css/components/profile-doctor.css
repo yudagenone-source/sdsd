@@ -1,0 +1,202 @@
+.doctor-profile-section {
+    padding: 3rem 0;
+    background-color: #f8f9fb;
+    font-family: 'Gilroy', sans-serif;
+}
+
+/* Doctor photo styling */
+.doctor-photo img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* Doctor name and title */
+.doctor-name {
+    font-weight: 700;
+    font-size: 32px;
+    color: #2e4368;
+    margin-bottom: 10px;
+}
+
+/* Specialty badge - Badge style with border */
+.doctor-specialist {
+    display: inline-block;
+    background-color: #fff;
+    color: #d1a361;
+    border: 2px solid #d1a361;
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+/* Experience meta with icon */
+.doctor-meta {
+    color: #637a9a;
+    font-size: 16px;
+    margin-bottom: 1.5rem;
+}
+
+.doctor-meta i {
+    margin-right: 8px;
+    color: #2e4368;
+}
+
+.meta-item {
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Bidang Keahlian badges - Blue style like in image */
+.badge-skill {
+    display: inline-block;
+    background-color: #e3edf7;
+    color: #2e4368;
+    border: 1px solid #dae4ef;
+    border-radius: 20px;
+    padding: 8px 18px;
+    font-weight: 600;
+    font-size: 14px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+/* Section headings */
+.doctor-section h5 {
+    color: #2e4368;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;
+}
+
+.doctor-section {
+    margin-bottom: 1.5rem;
+}
+
+/* Education list */
+.doctor-edu-list {
+    padding-left: 1.5rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+.doctor-edu-list li {
+    margin-bottom: 8px;
+}
+
+/* BOOK NOW button - Dark blue, uppercase */
+.book-btn {
+    background-color: #2e4368;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 35px;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 1.5rem;
+}
+
+.book-btn:hover {
+    background-color: #1e2c45;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(46, 67, 104, 0.3);
+}
+
+/* Jadwal */
+.schedule-section {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.schedule-title {
+    color: #2e4368;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.schedule-sub {
+    color: #637a9a;
+    font-size: 15px;
+    margin-bottom: 1.5rem;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.schedule-table thead {
+    background-color: #d1a361;
+    color: #fff;
+}
+
+.schedule-table th {
+    padding: 12px 15px;
+    border: 1px solid #d1a361;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.schedule-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    font-size: 15px;
+}
+
+.schedule-table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.schedule-table tbody tr:hover {
+    background-color: #f0f0f0;
+}
+
+/* Dokter lain */
+.other-doctor-section h4 {
+    color: #2e4368;
+    font-weight: 700;
+}
+
+.other-doctor-card {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.other-doctor-photo {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.other-doctor-name {
+    font-weight: 700;
+    color: #2e4368;
+}
+
+.other-doctor-spec {
+    color: #d1a361;
+    font-weight: 600;
+}
+
+.view-profile {
+    color: #2e4368;
+    font-weight: 600;
+    text-decoration: none;
+}
+.view-profile:hover {
+    color: #d1a361;
+}

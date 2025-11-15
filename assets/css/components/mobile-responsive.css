@@ -1,0 +1,623 @@
+
+/* ============================================
+   MOBILE RESPONSIVE CSS - SEURI DENTAL
+   ============================================ */
+
+/* ============================================
+   TABLET RESPONSIVENESS (768px and below)
+   ============================================ */
+@media only screen and (max-width: 768px) {
+    
+    /* === BASIC LAYOUT === */
+    body {
+        overflow-x: hidden;
+    }
+    
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    /* === HEADER/NAVIGATION === */
+    .main-header {
+        padding: 10px 15px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: white;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .main-header .header-logo {
+        max-height: 40px;
+    }
+    
+    .navbar-brand img.logo-img {
+        max-height: 45px;
+    }
+    
+    .main-nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+    }
+    
+    .main-nav.active {
+        display: flex !important;
+    }
+    
+    .main-nav a {
+        font-size: 1.5rem;
+        margin: 15px 0;
+        color: white;
+        text-decoration: none;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: #333;
+        z-index: 10000;
+    }
+    
+   
+    
+    /* === DENTALSEURI2 HERO SECTION (Service Pages) === */
+    .dentalseuri2-section {
+        margin-top: 80px !important;
+        padding: 2rem 15px !important;
+        border-radius: 15px !important;
+    }
+    
+    .dentalseuri2-container {
+        padding: 0 0px !important;
+        margin-bottom: 0;
+    }
+    
+    .dentalseuri2-section .row {
+        flex-direction: column-reverse !important;
+        gap: 20px;
+    }
+    
+    .dentalseuri2-section .col-md-5,
+    .dentalseuri2-section .col-md-6 {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+    
+    /* Main Image Responsive */
+    .dentalseuri2-main-image {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 250px !important;
+        object-fit: cover !important;
+        object-position: center !important;
+        margin: 0 auto !important;
+        display: block !important;
+        border-radius: 10px !important;
+    }
+    
+    /* Ornaments Mobile - Hide */
+    .dentalseuri2-ornament {
+        display: none !important;
+    }
+    
+    /* Text Content */
+    .dentalseuri2-title {
+        font-size: var(--font-h2) !important;
+        line-height: var(--lh-h2) !important;
+        margin-bottom: 1rem !important;
+        text-align: left;
+        padding: 0 10px;
+    }
+    
+    .dentalseuri2-desc {
+        font-size: var(--font-body) !important;
+        line-height: var(--lh-body) !important;
+        margin-bottom: 1.5rem !important;
+        text-align: left;
+        padding: 0 10px;
+    }
+    
+    .dentalseuri2-btn {
+        font-size: var(--font-button) !important;
+        padding: 12px 24px !important;
+        display: block;
+        margin: 0 auto 20px !important;
+        width: fit-content;
+    }
+    
+    /* Info Section Below Hero */
+    .dentalseuri2-info-section {
+        transform: translateY(0) !important;
+        margin-top: 30px !important;
+        height: auto !important;
+        padding: 20px !important;
+        border-radius: 15px !important;
+        margin-top: 20px !important;
+    }
+    
+    .dentalseuri2-info-row {
+        padding: 20px !important;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .dentalseuri2-info-section h3 {
+        font-size: var(--font-h5) !important;
+        text-align: left;
+    }
+    
+    .dentalseuri2-info-section p,
+    .dentalseuri2-info-section li {
+        font-size: var(--font-body) !important;
+        text-align: left;
+    }
+    
+    /* === SERVICES BANNER === */
+    .services-banner {
+        margin-top: 60px;
+        padding: 0 15px;
+    }
+    
+    .services-banner img {
+        width: 100%;
+        height: auto;
+        max-height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    
+    /* === PROMO SECTION === */
+    .promo-section {
+        padding: 40px 15px !important;
+        margin-top: 60px;
+    }
+    
+    .promo-title {
+        font-size: var(--font-h3) !important;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+    
+    .promo-card {
+        margin-bottom: 20px;
+    }
+    
+    .promo-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    
+    /* === BLOG/DENTIST HERO (Gradient Style) === */
+    section.relative.bg-gradient-to-r {
+        padding: 100px 15px 40px 15px !important;
+        margin-top: 0;
+    }
+    
+    section.relative.bg-gradient-to-r h1 {
+        font-size: var(--font-h2) !important;
+        line-height: var(--lh-h2) !important;
+        text-align: left;
+    }
+    
+    section.relative.bg-gradient-to-r p {
+        font-size: var(--font-body) !important;
+        text-align: left;
+    }
+    
+    section.relative.bg-gradient-to-r .max-w-2xl {
+        max-width: 100% !important;
+        padding: 0 10px;
+    }
+    
+    section.relative.bg-gradient-to-r input {
+        font-size: var(--font-body) !important;
+        padding: 12px 16px !important;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    section.relative.bg-gradient-to-r button {
+        padding: 12px 20px !important;
+        width: 100%;
+    }
+    
+    /* === GENERAL SECTIONS === */
+    .hero-content h1 {
+        font-size: var(--font-h2);
+        line-height: var(--lh-h2);
+        text-align: left;
+    }
+    
+    .hero-content p {
+        font-size: var(--font-body);
+        text-align: left;
+    }
+    
+    .hero-image {
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+    .section-title {
+        font-size: var(--font-h3);
+        text-align: left;
+    }
+    
+    .section-subtitle {
+        font-size: var(--font-body);
+        text-align: left;
+    }
+    
+    .about-section {
+        padding: 40px 15px;
+    }
+    
+    .about-content {
+        padding: 20px;
+        text-align: left;
+    }
+    
+    .about-content h1 {
+        font-size: var(--font-h2) !important;
+    }
+    
+    .about-content h3 {
+        font-size: var(--font-h4) !important;
+    }
+    
+    .about-image {
+        height: auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        border-radius: 10px;
+    }
+    
+    /* === SERVICES === */
+    .services-section {
+        padding: 40px 15px;
+    }
+    
+    .service-card {
+        margin-bottom: 20px;
+        text-align: left;
+    }
+    
+    .service-card img {
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    
+    /* === DENTISTS === */
+    .dentist-section {
+        padding: 40px 15px;
+    }
+    
+    .dentist-card {
+        margin-bottom: 20px;
+        text-align: left;
+    }
+    
+    .dentist-card img {
+        height: 250px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    
+    .dentist-name {
+        font-size: var(--font-h5);
+    }
+    
+    /* === TESTIMONIALS === */
+    .testimoni-section {
+        padding: 40px 15px;
+    }
+    
+    .testimoni-card {
+        padding: 15px;
+        margin-bottom: 15px;
+        text-align: left;
+    }
+    
+    /* === FACILITIES === */
+    .facilities-section {
+        padding: 40px 15px;
+    }
+    
+    .facility-card {
+        margin-bottom: 20px;
+        text-align: left;
+    }
+    
+    .facility-card img {
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    
+    /* === PARTNERS & INSURANCE === */
+    .partners-section,
+    .insurance-section {
+        padding: 40px 15px;
+        text-align: left;
+    }
+    
+    .partner-logo,
+    .insurance-logo {
+        max-width: 80px;
+        margin: 10px;
+        height: 60px;
+        object-fit: contain;
+    }
+    
+    /* === CTA === */
+    .consultation-cta {
+        padding: 30px 15px;
+        margin: 40px 15px;
+        text-align: left;
+        border-radius: 15px;
+    }
+    
+    .cta-title {
+        font-size: var(--font-h4);
+    }
+    
+    .btn-whatsapp {
+        font-size: var(--font-button);
+        padding: 12px 25px;
+        display: block;
+        margin: 0 auto;
+        width: fit-content;
+    }
+    
+    /* === FOOTER === */
+    .footer {
+        padding: 30px 15px;
+        text-align: left;
+    }
+    
+    .footer-section {
+        margin-bottom: 30px;
+    }
+    
+    .footer h5 {
+        font-size: var(--font-h5);
+        margin-bottom: 15px;
+    }
+    
+    .footer p,
+    .footer a {
+        font-size: var(--font-small);
+    }
+    
+    /* === NEWS/BLOG SECTION === */
+    .berita-section {
+        padding: 40px 15px;
+    }
+    
+    .berita-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .berita-card {
+        margin-bottom: 20px;
+    }
+    
+    .berita-card img {
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    
+    /* === SWIPER/CAROUSEL === */
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 30px;
+        height: 30px;
+        display: none;
+    }
+    
+    /* === LITTLE SEURI === */
+    .little-seuri-section {
+        padding: 40px 15px;
+        text-align: left;
+    }
+    
+    /* === TABLES === */
+    table {
+        font-size: var(--font-small);
+        width: 100%;
+        overflow-x: auto;
+        display: block;
+    }
+    
+    /* === BUTTONS === */
+    .btn {
+        font-size: var(--font-button);
+        padding: 10px 20px;
+        display: block;
+        margin: 0 auto;
+        width: fit-content;
+    }
+    
+    /* === CARDS === */
+    .card {
+        margin-bottom: 20px;
+        text-align: left;
+    }
+    
+    /* === TYPOGRAPHY === */
+    /* Typography is now controlled by CSS variables in style.css */
+    /* Only override alignment for mobile */
+    h1, h2, h3, h4, h5, h6 {
+        text-align: left;
+    }
+    
+    p {
+        text-align: left;
+    }
+    
+    /* === GRID SYSTEM === */
+    .row {
+        margin-left: -7.5px;
+        margin-right: -7.5px;
+        flex-direction: column;
+    }
+    
+    .row > * {
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+        margin-bottom: 15px;
+    }
+    
+    .col-md-4, .col-md-6, .col-md-8, .col-md-3 {
+        width: 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+}
+
+/* ============================================
+   MOBILE RESPONSIVENESS (480px and below)
+   ============================================ */
+@media only screen and (max-width: 480px) {
+    
+    /* === EVEN SMALLER PHONES === */
+    /* Typography automatically adjusted by CSS variables with clamp() */
+    /* Only specific overrides needed here */
+    
+    .caption-title {
+        font-size: var(--font-h4) !important;
+    }
+    
+    /* Image sizes for small phones */
+    .dentalseuri2-main-image {
+        height: 200px !important;
+    }
+    
+    .service-card img,
+    .promo-card img,
+    .berita-card img {
+        height: 180px !important;
+    }
+    
+    .dentist-card img {
+        height: 220px !important;
+    }
+    
+    .service-card,
+    .dentist-card,
+    .testimoni-card {
+        margin-bottom: 15px;
+    }
+    
+    .btn {
+        padding: 8px 16px;
+    }
+    
+    .partner-logo,
+    .insurance-logo {
+        max-width: 60px;
+        height: 50px;
+    }
+    
+    .carousel-item img,
+    .custom-carousel-item {
+        height: 200px !important;
+    }
+    
+    .custom-caption {
+        padding: 10px !important;
+    }
+    
+    .caption-title {
+        font-size: 1.1rem !important;
+    }
+    
+    .caption-text {
+        font-size: var(--font-small) !important;
+    }
+    
+    /* Padding adjustments for small phones */
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .hero-section,
+    .dentalseuri2-section,
+    .about-section,
+    .services-section,
+    .dentist-section,
+    .testimoni-section,
+    .facilities-section,
+    .partners-section,
+    .insurance-section,
+    .berita-section,
+    .little-seuri-section {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+}
+
+/* ============================================
+   DESKTOP - HIDE MOBILE ELEMENTS
+   ============================================ */
+@media (min-width: 769px) {
+    .mobile-menu-toggle {
+        display: none;
+    }
+}
+
+/* ============================================
+   PREVENT HORIZONTAL SCROLL & TOUCH FRIENDLY
+   ============================================ */
+@media (max-width: 768px) {
+    * {
+        max-width: 100%;
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .container-fluid {
+        overflow-x: hidden;
+    }
+    
+    /* Touch-friendly buttons */
+    .btn, .dentalseuri2-btn, .btn-whatsapp, .btn-more-info {
+        min-height: 44px;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Improve touch targets */
+    a, button {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

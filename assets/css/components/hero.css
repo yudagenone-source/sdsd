@@ -1,0 +1,348 @@
+/* --- CSS HERO SECTION --- */
+.container-fluid.p-0 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-top: 0 !important;
+}
+
+#heroCarousel {
+    border-radius: 0; 
+    overflow: hidden; 
+}
+
+.custom-carousel-item {
+    height: 567.39px; 
+    overflow: hidden; 
+    position: relative;
+}
+
+.custom-carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 4rem; 
+    height: 3rem;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+/* KOREKSI AKHIR DESKTOP: Batasi lebar area klik dan z-index */
+.carousel-control-prev {
+    left: 100px; 
+    width: 50px !important; /* Paksa lebar 50px */
+    z-index: 15 !important;
+}
+
+.carousel-control-next {
+    right: 100px; 
+    width: 50px !important; /* Paksa lebar 50px */
+    z-index: 15 !important;
+}
+
+
+/* --- KODE UNTUK CAPTION OVERLAY --- */
+
+/* Wadah Caption (Layout 2 Kolom) */
+.custom-caption {
+    position: absolute;
+    top: 50%; 
+    right: 0; 
+    transform: translateY(-50%); 
+    text-align: right;
+    width: 50%; /* Ambil 50% width untuk kolom kanan */
+    max-width: none;
+    z-index: 11; /* Z-INDEX TERTINGGI untuk Caption */
+    padding-right: 15%; /* Beri jarak dari kanan */
+    box-sizing: border-box;
+}
+
+/* Grup Teks (Judul dan Paragraf) */
+.caption-text-group {
+    text-align: left;
+    width: 100%;
+}
+
+/* Judul Utama */
+.caption-title {
+    font-size: 4.5rem; 
+    font-weight: 700;
+    line-height: 1.1; 
+    margin-bottom: 1.5rem;
+    color: white; 
+    width: 100%;
+}
+
+/* Sub-judul/Deskripsi */
+.caption-text {
+    font-size: 1.4rem; 
+    font-weight: 400;
+    margin-bottom: 2rem;
+    color: white; 
+    line-height: 1.5;
+    width: 100%;
+}
+
+/* Tombol More Info */
+.btn-more-info {
+    background-color: #D1A361 !important; 
+    border-color: #D1A361 !important;
+    color: white !important;
+    font-weight: bold;
+    padding: 12px 30px; 
+    border-radius: 6px; 
+    font-size: 1rem;
+    text-transform: uppercase;
+    display: inline-flex; 
+    align-items: center;
+    gap: 0.5rem; 
+    margin-top: 1rem;
+}
+.btn-more-info:hover {
+    background-color: #a87346 !important; 
+    border-color: #a87346 !important;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+
+/* Tablet Landscape */
+@media (max-width: 1199.98px) {
+    .custom-caption {
+        padding-right: 10%;
+        width: 55%;
+    }
+    
+    .caption-title {
+        font-size: 4rem;
+    }
+    
+    .caption-text {
+        font-size: 1.3rem;
+    }
+}
+
+/* Tablet Portrait */
+@media (max-width: 991.98px) {
+    .custom-carousel-item {
+        height: 500px;
+    }
+    
+    .custom-caption {
+        width: 60%;
+        padding-right: 8%;
+    }
+    
+    .caption-title {
+        font-size: 3.2rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .caption-text {
+        font-size: 1.2rem;
+        margin-bottom: 1.8rem;
+    }
+    
+    .btn-more-info {
+        padding: 5px 28px;
+        font-size: 0.95rem;
+    }
+    
+    /* Tombol Panah (Tablet) */
+    .carousel-control-prev {
+        left: 50px;
+        width: 50px !important;
+        z-index: 15 !important;
+    }
+    
+    .carousel-control-next {
+        right: 50px;
+        width: 50px !important;
+        z-index: 15 !important;
+    }
+}
+
+/* Small Tablet */
+@media (max-width: 767.98px) {
+    .custom-carousel-item {
+        height: 450px;
+    }
+    
+    .custom-caption {
+        width: 65%;
+        padding-right: 5%;
+    }
+    
+    .caption-title {
+        font-size: 2.8rem;
+        margin-bottom: 1rem;
+    }
+    
+    .caption-text {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .btn-more-info {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+    
+    /* Tombol Panah (Small Tablet) */
+    .carousel-control-prev {
+        left: 30px;
+        width: 40px !important;
+        z-index: 15 !important;
+    }
+    
+    .carousel-control-next {
+        right: 30px;
+        width: 40px !important;
+        z-index: 15 !important;
+    }
+}
+
+/* Mobile Large */
+@media (max-width: 575.98px) {
+    .custom-carousel-item {
+        height: 400px;
+    }
+    
+    .custom-caption {
+        width: 70%;
+        padding-right: 5%;
+    }
+    
+    .caption-title {
+        font-size: 2.2rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .caption-text {
+        font-size: 1rem;
+        margin-bottom: 1.2rem;
+        line-height: 1.4;
+    }
+    
+    .btn-more-info {
+        padding: 9px 22px;
+        font-size: 0.85rem;
+        gap: 0.4rem;
+    }
+    
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 3rem;
+        height: 2.5rem;
+    }
+    
+    /* Tombol Panah (Mobile Large) */
+    .carousel-control-prev {
+        left: 15px;
+        width: 40px !important;
+        z-index: 15 !important;
+    }
+    
+    .carousel-control-next {
+        right: 15px;
+        width: 40px !important;
+        z-index: 15 !important;
+    }
+}
+
+/* Mobile Medium (480px) dan Small (375px & 320px) */
+/* Dalam resolusi ini, kita geser tombol lebih ke tepi dan pertahankan lebar sempit */
+@media (max-width: 480px) {
+    .custom-carousel-item {
+        height: 100%;
+        margin-top: 35px;
+    }
+    
+    .custom-caption {
+        width: 60%;
+       padding-top: 0px;
+    }
+    
+    .caption-title {
+        font-size: 1.1rem;
+    }
+    
+    .caption-text {
+        font-size: 0.60rem;
+    }
+    
+    .btn-more-info {
+        font-size: 0.95rem;
+        padding: 8px 20px;
+        font-size: 0.5rem;
+    }
+    
+    /* Tombol Panah (Mobile Medium) */
+    .carousel-control-prev {
+        left: 5px; /* Geser lebih ke tepi */
+        width: 30px !important;
+        z-index: 15 !important;
+    }
+    
+    .carousel-control-next {
+        right: 5px; /* Geser lebih ke tepi */
+        width: 30px !important;
+        z-index: 15 !important;
+    }
+}
+
+@media (max-width: 375px) {
+    .custom-carousel-item {
+        height: 100%;
+        margin-top: 35px;
+    }
+    
+    .custom-caption {
+        width: 60%;
+       padding-top: 30px;
+    }
+    
+    .caption-title {
+        font-size: 1rem;
+    }
+    
+    .caption-text {
+        font-size: 0.50rem;
+    }
+    
+    .btn-more-info {
+        font-size: 0.75rem;
+        padding: 8px 20px;
+        font-size: 0.5rem;
+    }
+    
+    /* Tombol Panah (Mobile Small) */
+    .carousel-control-prev {
+        left: 0px; /* Geser paling tepi */
+        width: 30px !important;
+        z-index: 15 !important;
+    }
+    
+    .carousel-control-next {
+        right: 0px; /* Geser paling tepi */
+        width: 30px !important;
+        z-index: 15 !important;
+    }
+}
+
+@media (max-width: 320px) {
+    /* Gunakan setingan 375px */
+    .carousel-control-prev {
+        left: 0px;
+        width: 30px !important;
+        z-index: 15 !important;
+    }
+    
+    .carousel-control-next {
+        right: 0px;
+        width: 30px !important;
+        z-index: 15 !important;
+    }
+}

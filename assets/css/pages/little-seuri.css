@@ -1,0 +1,178 @@
+/* Import Font Gilroy. */
+@import url('https://fonts.cdnfonts.com/css/gilroy-bold');
+
+/* Button MAKE APPOINTMENT */
+.seuri-btn-primary {
+    background-color: #f7a944; /* Warna kuning */
+    border-color: #f7a944;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+}
+.seuri-btn-primary:hover {
+    background-color: #e69d3a;
+    border-color: #e69d3a;
+}
+
+/* ================================================= */
+/* HERO SECTION (HEROONE) STYLING - Fokus Utama */
+/* ================================================= */
+
+.seuri-hero-little-seuri {
+    padding-top: 20px;
+    padding-bottom: 70px; /* Ruang untuk info operasional di bawah */
+    position: relative;
+    
+}
+
+.seuri-hero-card {
+    /* Kartu Hero: latar belakang biru muda, sudut membulat */
+    background-color: #A2BCDE; /* Warna biru muda */
+    border-radius: 20px;
+    overflow: visible; /* Dipertahankan agar gambar bisa keluar dari batas card */
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    z-index: 2; /* Diberi z-index lebih tinggi agar menutupi operational-info */
+    /* **PERUBAHAN:** padding-bottom yang berlebihan dihapus agar tinggi card tidak bertambah */
+    
+}
+
+/* Kolom Gambar Kiri */
+.seuri-hero-image-container {
+    position: relative;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    overflow: visible; /* Tambah ini biar atasnya gak kepotong */
+}
+.seuri-hero-image {
+    /* IMPLEMENTASI EFEK GAMBAR MELEBIHI BATAS ATAS SAJA, BAWAH RATA */
+    position: absolute; 
+    top: -25px; /* Angkat gambar 25px ke atas */
+    height: calc(100% + 25px); /* PENTING: Tinggi harus 100% + nilai top negatif untuk rata di bawah */
+    width: 70%;
+    object-fit: cover;
+    z-index: 10; /* Pastikan gambar berada di atas background biru (z-index: 2) */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Kurva dekoratif (seperti di desain) */
+
+/* Teks Kanan */
+.seuri-hero-content {
+    max-width: 90%;
+    color:#344268; 
+    /* Teks sudah putih */
+}
+
+/* Button Book Your Child's Visit Today */
+.seuri-btn-hero-secondary {
+    background-color: #e69d3a;
+    border-color: #fff;
+    color: #ffffff; /* Warna teks tombol */
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+}
+.seuri-btn-hero-secondary:hover {
+    background-color: #f8f9fa;
+    color: #3f90b9;
+}
+
+/* Info Operasional (Bagian Abu-abu di Bawah Card) */
+.seuri-operational-info {
+    width: 100%; 
+    margin: -35px auto 0 auto; /* Angkat 35px */
+    padding: 70px 30px 40px 30px !important; /* **PERUBAHAN:** Padding vertikal yang lebih besar dipertahankan */
+    background-color: #cfcfcf; /* Warna abu-abu latar belakang */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    z-index: 1; /* Dipertahankan di belakang card (z-index: 2) */
+    position: relative; 
+    font-family: 'Gilroy-Medium', sans-serif;
+    
+}
+
+.seuri-operational-info .fw-bold {
+    color: #333; 
+}
+
+.seuri-operational-info p {
+    color: #6c757d; 
+    font-size: 0.95rem;
+}
+
+/* Bullet point kecil biru */
+.seuri-bullet {
+    font-size: 0.5em; 
+    color: #3f90b9; 
+    vertical-align: middle;
+}
+
+/* Maps Button */
+.seuri-btn-maps {
+    background-color: #6c757d; /* Warna abu-abu gelap tombol Check Maps */
+    border-color: #6c757d;
+    color: #fff;
+    padding: 8px 25px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+.seuri-btn-maps:hover {
+    background-color: #5a6268;
+    border-color: #5a6268;
+}
+
+
+/* ================================================= */
+/* RESPONSIVENESS */
+/* ================================================= */
+
+@media (max-width: 991.98px) {
+    /* Tablet */
+    .seuri-hero-image-container::after {
+        display: none;
+    }
+}
+
+@media (max-width: 767.98px) {
+    /* Mobile View */
+    /* Mengembalikan gambar ke posisi normal di mobile */
+    .seuri-hero-image-container {
+        position: relative;
+        min-height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .seuri-hero-image {
+        /* IMPLEMENTASI EFEK GAMBAR MELEBIHI BATAS ATAS SAJA, BAWAH RATA */
+        position: relative;
+        height: calc(100% + 25px);
+        width: auto;
+        max-width: 70%;
+        object-fit: contain;
+        z-index: 10;
+        margin-top: -25px;
+    }
+    .seuri-hero-image-container::after {
+        display: none; /* Hilangkan kurva di mobile */
+    }
+
+    .seuri-operational-info {
+        margin-top: 20px; 
+        width: 100%; /* Full width di mobile */
+        border-radius: 10px;
+        padding: 15px !important; /* Mengurangi padding di mobile */
+        text-align: left !important;
+    }
+    .seuri-operational-info .col-12 {
+        margin-bottom: 10px;
+    }
+    .seuri-operational-info .col-md-3 {
+        justify-content: start !important;
+    }
+}

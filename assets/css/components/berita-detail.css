@@ -1,0 +1,124 @@
+.berita-detail-section {
+    background-color: #f8f9fb;
+    padding: 3rem 0;
+    font-family: 'Gilroy', sans-serif;
+}
+
+/* Artikel utama */
+.berita-detail-image img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.berita-detail-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #2e4368;
+    margin-top: 1.5rem;
+}
+
+.berita-detail-meta {
+    color: #999;
+    font-size: 15px;
+    margin-bottom: 1rem;
+}
+
+.berita-detail-content {
+    color: #444;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* Sidebar */
+.berita-sidebar {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar-search {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.sidebar-input {
+    width: 100%;
+    border: 2px solid #d6d6d6;
+    border-radius: 25px;
+    padding: 0.5rem 1rem;
+    padding-right: 40px;
+    outline: none;
+}
+
+.sidebar-btn {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    border: none;
+    background: transparent;
+    color: #6381a8;
+    cursor: pointer;
+}
+
+.sidebar-title {
+    color: #2e4368;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 1rem;
+}
+
+/* Related item */
+.related-item {
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.related-item:hover {
+    transform: translateX(5px);
+}
+
+.related-thumb {
+    width: 100px;
+    height: 70px;
+    object-fit: cover;
+}
+
+.related-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #2e4368;
+}
+
+.related-date {
+    font-size: 13px;
+    color: #999;
+}
+
+/* Pagination */
+.berita-pagination {
+    text-align: center;
+}
+
+.page-btn {
+    display: inline-block;
+    border: none;
+    background-color: transparent;
+    color: #6381a8;
+    font-weight: 700;
+    font-size: 16px;
+    margin: 0 5px;
+    transition: 0.3s;
+    padding: 6px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.page-btn.active {
+    background-color: #d1a361;
+    color: #fff;
+}
+
+.page-btn:hover {
+    color: #d1a361;
+}

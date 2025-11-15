@@ -1,0 +1,67 @@
+.promo-section {
+    font-family: 'Gilroy', sans-serif;
+  }
+  
+  .promo-title {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 2rem;
+    text-align: left;
+  }
+  
+  .divider {
+    width: 120px;
+    height: 3px;
+    background: #d7a86e;
+    border-radius: 6px;
+    margin-left: 0;
+  }
+  
+  .promo-card {
+    border-radius: 16px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .promo-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .promo-card img {
+    border-radius: 12px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    flex-grow: 1;
+  }
+  
+  .btn-claim {
+    background-color: #2576d3;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .btn-claim:hover {
+    background-color: #1d91be;
+    color: #fff;
+  }
+  
+  /* Menghapus style Swiper yang tidak diperlukan */
+  @media (max-width: 768px) {
+    .promo-title {
+      font-size: 1.6rem;
+    }
+    .promo-card {
+      padding: 16px;
+    }
+  }

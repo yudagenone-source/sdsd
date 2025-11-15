@@ -1,0 +1,32 @@
+.faq-section,
+.accordion-item,
+.accordion-button,
+.accordion-body {
+    background: transparent !important;
+
+}
+
+/* Hilangkan efek putih saat aktif */
+.accordion-button:not(.collapsed) {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.accordion-button {
+    color: #6381a8 !important;
+    font-size: 1.6rem;
+}
+
+.accordion-button:focus {
+    box-shadow: none !important;
+}
+
+.accordion-item {
+    border: 0;
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.1);
+}
+
+.accordion-body {
+    font-size: 1.3rem;
+    line-height: 1.6;
+}

@@ -1,0 +1,65 @@
+/* --- CSS INSURANCE PARTNER SECTION (image_000dbf.png) --- */
+
+.insurance-partner-section {
+   
+    padding: 4rem 0 5rem 0; 
+    text-align: center;
+}
+
+.insurance-partner-container {
+    max-width: 1000px;
+}
+
+.insurance-partner-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #5D7598; /* Warna biru keabu-abuan */
+    margin-bottom: 3.5rem; 
+}
+
+/* --- LOGO WRAPPER & ITEM --- */
+
+/* Wrapper untuk setiap logo */
+.insurance-logo-item {
+    /* Menjamin logo berada di tengah kolomnya */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px; /* Padding antar logo */
+}
+
+.insurance-logo {
+    /* Batasi lebar logo agar tidak terlalu besar */
+    max-width: 100%;
+    height: auto;
+    /* Batasi tinggi maksimum */
+    max-height: 100px; 
+    display: block;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 991.98px) {
+    .insurance-partner-title {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .insurance-partner-section {
+        padding: 3rem 0;
+    }
+
+    .insurance-partner-title {
+        font-size: 1.8rem;
+    }
+    
+    /* Di mobile sangat kecil, buat logo tampil satu baris (col-6) */
+    .insurance-logo-item {
+        /* Tambahkan margin vertikal agar tidak berdekatan */
+        margin-bottom: 1.5rem; 
+    }
+    
+    .insurance-logo {
+        max-height: 80px;
+    }
+}

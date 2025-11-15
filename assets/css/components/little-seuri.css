@@ -1,0 +1,125 @@
+/* --- CSS LITTLE SEURI SECTION --- */
+
+.little-seuri-section {
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+}
+
+/* Hapus margin/padding default dari row */
+.little-seuri-section .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* 1. WRAPPER KONTEN KIRI (Background Putih, Full Height, Mentok Kiri) */
+.little-seuri-content-wrapper {
+    /* FULL WIDTH DI KOLOMNYA */
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    
+    /* BACKGROUND PUTIH */
+    background-color: #ffffff;
+    
+    /* MENJAMIN KETINGGIAN SAMA DENGAN GAMBAR (min-height) */
+    min-height: 500px; 
+    
+    /* KUNCI: FLEXBOX UNTUK MENENGAHKAN KOTAK PENDEK */
+    display: flex;
+    /* Dorong kotak ke kanan (merapat ke gambar) */
+    justify-content: flex-end; 
+    /* KUNCI: Kotak di tengah vertikal */
+    align-items: center; 
+    border-top: black 2px solid;
+    border-bottom: black 2px solid;
+}
+
+
+/* 2. KOTAK KONTEN INTERNAL (little-seuri-content-box) */
+.little-seuri-content-box {
+    /* KUNCI: TINGGI PENDEK (HANYA SEBANYAK KONTEN) */
+    height: auto; 
+    min-height: auto !important; /* TIDAK ADA PAKSAAN TINGGI */
+    
+    /* KUNCI: BATASI LEBAR AGAR PENDEK & TERPUSAT HORIZONTAL DI KOLOMNYA */
+    max-width: 85%; 
+    /* Margin kiri untuk jarak dari tepi layar */
+    margin: 0 10%; 
+    margin-right: 0; /* Margin kanan dihilangkan agar merapat ke garis pemisah */
+    
+    /* Border (sebagai garis pemisah vertikal) */
+    border: 1px solid #e0e0e0; 
+    border-top: none; 
+    border-bottom: none;
+    border-left: none; /* Hapus border kiri */
+    border-right: 1px solid #e0e0e0; /* Pertahankan border kanan sebagai pemisah */
+    
+    /* Sudut tidak melengkung */
+    border-radius: 0 !important; 
+
+    /* Padding INTERNAL */
+    padding: 3rem 4rem 3rem 4rem; 
+    
+    background-color: transparent; 
+}
+
+
+/* --- LOGO IMAGE & GARIS PEMISAH (Tidak Berubah) --- */
+.little-seuri-logo-wrapper { margin-bottom: 2rem; }
+.little-seuri-logo { max-width: 250px; height: auto; }
+.divider-line {
+    border-top: 1px solid #d0d0d0; width: 100%; margin-top: 1rem; margin-bottom: 1.5rem;
+}
+.little-seuri-text { color: #555555; font-size: 1.25rem; line-height: 1.6; }
+
+/* --- GAMBAR KANAN (little-seuri-image-wrapper) --- */
+.little-seuri-image-wrapper {
+    padding-left: 0 !important; 
+    padding-right: 0 !important; 
+}
+
+.little-seuri-image {
+    /* Gambar yang menentukan min-height baris */
+    min-height: 500px;
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+    
+    /* HILANGKAN CORNER ROUNDED */
+    border-radius: 5% !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+
+/* Tablet dan Mobile (di bawah 992px) */
+@media (max-width: 991.98px) {
+    .little-seuri-section { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+
+    .little-seuri-content-wrapper {
+        min-height: auto; 
+        justify-content: center; 
+    }
+
+    .little-seuri-content-box {
+        padding: 2rem;
+        max-width: 100%; 
+        /* Border full dan rounded di mobile */
+        border: 1px solid #e0e0e0; 
+        border-radius: 10px !important; 
+        margin: 0 15px; 
+    }
+
+    .little-seuri-image-wrapper { margin-top: 2rem; }
+    
+    .little-seuri-image {
+        min-height: 350px;
+        border-radius: 10px !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 575.98px) {
+    .little-seuri-content-box { padding: 1.5rem; }
+    .little-seuri-image { min-height: 250px; }
+}

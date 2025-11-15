@@ -1,0 +1,125 @@
+/* --- CSS WHY PEOPLE LOVE SEURI SECTION --- */
+
+.why-seuri-section {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+.why-seuri-container {
+    max-width: 1100px;
+}
+
+/* Judul Section "Why Do People Love Seuri?" */
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #344268;
+    margin-bottom: 3rem !important;
+}
+
+/* Kotak Fitur per Kolom */
+.feature-box {
+    padding: 1rem;
+    height: 100%; 
+}
+
+/* Lingkaran Ikon Cokelat */
+.icon-circle {
+    background-color: #D1A361; 
+    width: 140px; 
+    height: 140px;
+    border-radius: 50%;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1.5rem auto; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.why-icon {
+    width: 70px;
+    height: auto; /* Tambahkan ini untuk menjaga proporsi */
+    transition: all 0.3s ease; /* Animasi halus saat berubah ukuran */
+}
+
+/* Judul Fitur (Compassionate, Experienced, Accessible) */
+.feature-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #000000; 
+}
+
+/* Deskripsi Teks */
+.feature-text {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #555555;
+    max-width: 300px;
+    margin: 0 auto; 
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+@media (max-width: 991.98px) {
+    .why-seuri-section {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+        margin-bottom: 2rem !important;
+    }
+    
+    .icon-circle {
+        width: 120px; /* Lebih proporsional dari sebelumnya */
+        height: 120px;
+    }
+    
+    .why-icon {
+        width: 60px; /* Sesuaikan ukuran ikon dengan lingkaran */
+    }
+    
+    .feature-title {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .why-seuri-section {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .icon-circle {
+        width: 100px; /* Ukuran lebih kecil untuk mobile */
+        height: 100px;
+        margin-bottom: 1rem;
+    }
+    
+    .why-icon {
+        width: 50px; /* Ukuran ikon yang sesuai untuk mobile */
+    }
+    
+    .feature-text {
+        max-width: 90%;
+    }
+}
+
+/* Tambahan untuk perangkat sangat kecil */
+@media (max-width: 575.98px) {
+    .icon-circle {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .why-icon {
+        width: 40px;
+    }
+}
